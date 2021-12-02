@@ -1,23 +1,15 @@
 # 🔥 Assignment_REDBRICK (with NestJS)
 
-🧱 wanted x wecode 프리온보딩 백엔드 코스 - [Assignment 3] 레드브릭
+이 Read.me에는 제가 무엇을 했는지만 적혀있습니다. 팀 전체가 무엇을 했는지 궁금하시다면 하단의 링크를 참조해주세요.    
+[Assignment_2_MAPIA 팀 Repository](https://github.com/preOnboarding-Team13/Assignment_2_MAPIA)
 
-[주요 서비스 사이트](https://wizlab.net/)
+<br/>
 
-[서버 개발자 채용 공고](https://www.notion.so/22564a15d2da40ab9d5812c68dd7ff3d) 
+<br>
 
+## 🍭 TIL 블로그 주소
 
-
-## ☄️ 팀원 소개
-
-| 이름                                     | 담당 기능 |
-| ---------------------------------------- | --------- |
-| [김바다](https://github.com/sally0226)   |Project API 기능 구현 & Unit Test 구현, E2E Test|
-| [김효민](https://github.com/luckyhyom)   |Socket, Unit Test, Refactoring, 게임 (출시,검색) API 구현|
-| [원동균](https://github.com/WonDongGyun) |Socket 설정 및 구현, like hate 기능 구현 & unit 테스트, 공통 에러 처리 및 응답 구현|
-| [이나영](https://github.com/bokiri409)   |Project API 기능 구현 & Unit Test 구현|
-| [장희진](https://github.com/heejin99)    |User, Auth 기능 구현 & Unit Test 구현, AWS 서버 배포|
-| [조재복](https://github.com/ildang100)   |코드 Refactoring, E2E Test|
+- 원동균 : [티스토리 블로그](https://tristy.tistory.com/45)
 
 <br>
 
@@ -49,7 +41,7 @@ $ npm start
 
 4. 정해진 API에 접근하여 서비스를 이용합니다.
 
-
+<br>
 
 ## 📝 과제 요구사항
 
@@ -103,7 +95,7 @@ $ npm start
  (2) 위의 Architecture를 토대로 기능을 구현하세요
 ```
 
-
+<br>
 
 ## 🏫 사용 기술
 
@@ -112,7 +104,7 @@ $ npm start
 -   Collaboration : <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=Git&logoColor=white"/></a> <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white"/></a> <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat&logo=Postman&logoColor=white"/></a>
 -   Deploy: <img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=flat&logo=Amazon AWS&logoColor=white"/>
 
-
+<br>
 
 ## 📂 폴더 구조
 
@@ -208,20 +200,19 @@ test 폴더: e2e test 폴더
 └── README.md
 ```
 
-
+<br>
 
 
 ## 🧬 DB 모델링
 
 ![Untitled Diagram drawio (2)](https://user-images.githubusercontent.com/43634786/140792086-063c5ac0-49cc-4adf-a963-1d8015bee08e.png)
 
+<br>
 
 
-## 🔗 구현 기능
+# 🔗 구현 기능
 
-<br/>
-
-### 1) Check List
+### Check List
 
 
 - 회원가입
@@ -278,23 +269,12 @@ test 폴더: e2e test 폴더
 <br/>
 <br/>
 
-### 2) 상세 내용
+🧪 내가 이번 프로젝트에서 무엇을 했지?
+-----------------  
 
-#### Database로 MongoDB 선택
+**1) 해당 기업의 홈페이지 분석 및 socket 설정**  
 
-사용자가 실시간으로 작성하는 게임 프로젝트가 빠르게 저장되려면 관계형 데이터베이스보다 비관계형 데이터베이스를 사용해서 각종 데이터를 저장하자고 생각하였습니다. 비관계형 데이터베이스는 팀원들에게 익숙한 MongoDB를 사용하였습니다.
-
-<br/>
-
-#### mongoose 라이브러리 사용
-
-TypeOrm도 MongoDB를 지원해주지만, TypeOrm은 MongoDB 3.7버전까지 밖에 지원을 해주지 않으며 TypeOrm의 QueryBuilder도 지원되지 않습니다. 따라서 Nest Js에서 MongoDB와 잘맞는 mongoose ODM을 사용하여 프로젝트를 진행하였습니다.
-
-<br/>
-
-#### 실시간 처리를 위한 socket 통신 이용  
-
-해당 기업에서 실시간 처리를 어떻게 하는지 궁금해서 구글 크롬의 개발자 기능을 사용하여 WizLab 서비스의 Network 통신을 보기로 했습니다. 해당 서비스에서는 사용자가 실시간으로 자신의 게임을 편집할 때마다 소켓 통신을 사용하여 백엔드 서버로 데이터를 전송하고 있었습니다. 따라서 프로젝트를 실시간으로 반영하기 위해 소켓 통신을 사용하여 데이터베이스에 저장하기로 하였습니다. 
+이번 과제에서는 특이하게도 실시간으로 반영이 되어야 한다는 조건이 붙어있었습니다. 직접 해당 기업의 사이트에 회원가입을 하고 서비스를 이용해보니까 요구사항에 왜 이런 항목이 있었는지 알 수 있었습니다. 열심히 게임을 만들다가 잘못해서 인터넷이 종료된 경우, 작업물이 날라가면 안되니까요. 그래서 이 부분을 어떻게 처리하고 있는지 `Chrome`의 `개발자 도구`를 통해서 확인해본 결과 게임 제작 서비스를 이용하고 있을 경우, 사용자가 오브젝트를 배치할 때마다 소켓 통신을 통해서 데이터를 저장한다는 것을 확인할 수 있었습니다. 그래서 저희 팀은 소켓을 사용하여 프로젝트를 실시간으로 저장할 수 있게끔 구현하기로 했습니다.
 
 <br/>
 
@@ -345,6 +325,23 @@ Postman으로는 다음과 같이 소켓 통신 테스트를 진행할 수 있�
 <br/>
 <br/>
 
+**2) `좋아요`, `싫어요` 기능 구현 및 unit Test**  
+
+좋아요와 싫어요 모두 로그인한 사용자만 가능하며, 사용자당 한번 씩만 할 수 있는 기능입니다. 퍼블리싱한 게임을 대상으로는 딱 하나만 좋아요를 누르거나 그것을 취소할 수 있는것이죠. 따라서 저는 Project 컬렉션에 해당 좋아요 수 부분을 리스트로 저장하며, 좋아요를 누른 경우에는 `해당 ID : true`, 싫어요를 누른 경우에는 `해당 ID:false`를 주기로 했습니다. 이렇게 하면 나중에 좋아요 수를 구하기도 쉽고, 클라이언트에 해당 사용자가 다음에 어떤 버튼을 누를 수 있게 해야하는지를 알려줄 수 있습니다. 다만 여기서 아쉬웠던 것은 service 코드에 에러처리와 비교문 등이 얽혀있어서 가독성이 좋지 않다는 점입니다. 이때 시간이 없어서 이 부분을 고치지 못했지만, 이렇게 짜면 가독성이 좋지 않다는 것을 느끼고 이후 프로젝트에서는 서비스에서 데이터베이스에 접근하는 것이 아닌 리포지토리에서 접근하도록 바꿨습니다.
+
+<br/>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/52685665/144447110-a00308f6-a6c0-44f5-87d6-94dd1d503c6c.png"></p>
+
+<br/>
+
+Unit Test는 Jest를 사용하여 진행했으며, 요번에는 성공했을 때의 테스트 뿐만아니라 실패했을 경우도 테스트를 하였습니다. 
+
+<br/>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/52685665/144447775-f5f91a9f-9f3d-4af3-833c-34b1aa639694.png"></p>
+
+<br/>
 
 ## 😎 Architecture
 
@@ -389,13 +386,4 @@ Postman으로는 다음과 같이 소켓 통신 테스트를 진행할 수 있�
 #### 6. Like, Hate API를 이용하여 로그인 한 유저는 퍼블리싱 된 게임에 좋아요와 싫어요를 누를 수 있습니다.
 
 
-<br/>
 
-## 🍭 TIL 블로그 주소
-
-- 김바다 : 
-- 김효민 : [티스토리 블로그](https://baejjang.tistory.com/6)
-- 원동균 : [티스토리 블로그](https://tristy.tistory.com/45)
-- 이나영 :
-- 장희진 : [깃허브 블로그](https://heejin99.github.io/preonboarding/Pre-Onboarding-%EA%B8%B0%EC%97%85%EA%B3%BC%EC%A0%9C-%EB%A0%88%EB%93%9C%EB%B8%8C%EB%A6%AD-TIL/)
-- 조재복 : 
